@@ -5,6 +5,8 @@ use warnings;
 use Exporter qw(import);
 our @EXPORT = qw(alig);
 
+# VERSION
+
 my %words = (
     "absent" => "not in da house",
     "absolutely" => "for real",
@@ -733,9 +735,22 @@ sub alig {
         $s =~ s/en$/un/;
         $s =~ s/er$/a/;
         $s =~ s/or$/a/;
-        $s =~ s/^h//;
+        #$s =~ s/^h//;
     }
     return $s;
 }
+
+# ABSTRACT: Translates from English to Ali G
+
+=head1 SYNOPSIS
+
+    echo hello | alig
+
+=head1 DESCRIPTION
+
+This module provides a script called alig. It will translate whatever you
+feed it via STDIN to Ali G.
+
+=cut
 
 1;
