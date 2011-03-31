@@ -1,0 +1,7 @@
+=head1 INSTALLATION
+
+    sudo cpan Acme::AliG
+
+=head1 DOCUMENTATION
+
+see L<Acme::AliG>
