@@ -11,8 +11,6 @@ my %words = (
     "absent" => "not in da house",
     "absolutely" => "for real",
     "actual" => "hactual",
-    "adolescant" => "half bush",
-    "adolescence" => "half bush",
     "agent" => "asian",
     "alright" => "aight",
     "am" => "is",
@@ -536,8 +534,6 @@ my %words = (
     "team" => "crew",
     "techno" => "speed garage",
     "technology" => "bits",
-    "teenage" => "half bush",
-    "teenager" => "half bush",
     "terrorism" => "terrerorism",
     "terrorist" => "terrerorist",
     "terrorist" => "terrerorists",
@@ -737,6 +733,11 @@ sub alig {
         $s =~ s/or$/a/;
         #$s =~ s/^h//;
     }
+    if ($s =~ /\?/) {
+        $s =~ s/(.*\?)/$1 Is it becoz I is black?/ if int(rand() * 3) == 0;
+    } elsif ($s =~ /!/) {
+        $s =~ s/(.*)!/$1, boyakasha!/              if int(rand() * 3) == 0;
+    }
     return $s;
 }
 
@@ -749,7 +750,7 @@ sub alig {
 =head1 DESCRIPTION
 
 This module provides a script called alig. It will translate whatever you
-feed it via STDIN to Ali G.
+feed it via STDIN from English to Ali G.
 
 =cut
 
