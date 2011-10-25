@@ -539,7 +539,7 @@ my %words = (
     "terrorist" => "terrerorists",
     "test" => "da test",
     "thanks" => "big up",
-    "thanks" => "fanks",
+    #"thanks" => "fanks",
     "that" => "dat",
     "thats" => "dats",
     "that's" => "innit",
@@ -723,14 +723,14 @@ my %phrases = (
 
 sub alig {
     my ($s) = @_;
-    while (my ($key, $value) = each %phrases) { $s =~ s/\b$key\b/$value/ }
-    while (my ($key, $value) = each %words)   { $s =~ s/\b$key\b/$value/ }
+    while (my ($key, $value) = each %phrases) { $s =~ s/\b$key\b/$value/g }
+    while (my ($key, $value) = each %words)   { $s =~ s/\b$key\b/$value/g }
     foreach (split ' ', $s) {
-        $s =~ s/ing$/in/;
-        $s =~ s/th$/f/;
-        $s =~ s/en$/un/;
-        $s =~ s/er$/a/;
-        $s =~ s/or$/a/;
+        $s =~ s/ing\b/in/g;
+        $s =~ s/th\b/f/g;
+        $s =~ s/en\b/un/g;
+        $s =~ s/er\b/a/g;
+        $s =~ s/or\b/a/g;
         #$s =~ s/^h//;
     }
     if ($s =~ /\?/) {
