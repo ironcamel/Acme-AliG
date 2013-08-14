@@ -4,4 +4,4 @@ use warnings;
 
 BEGIN { use_ok 'Acme::AliG' }
 
-is alig('hello') => 'alo', 'alo';
+is alig('hello') => 'allo', 'allo';

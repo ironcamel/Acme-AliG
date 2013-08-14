@@ -280,14 +280,14 @@ my %words = (
     "hassle" => "aggro",
     "hate" => "don't dig",
     "hated" => "rank",
-    "hello" => "alo",
+    "hello" => "allo",
     "here" => "ere",
     "here" => "in da house",
     "heroin" => "gear",
-    "hi" => "alo",
+    "hi" => "allo",
     "hiphop" => "speed garage",
     "his" => "is",
-    "hiya" => "alo",
+    "hiya" => "allo",
     "hole" => "batty",
     "home" => "turf",
     "home" => "westside",
@@ -746,6 +746,8 @@ sub alig {
 =head1 SYNOPSIS
 
     echo hello | alig
+
+The above command will print 'allo'.
 
 =head1 DESCRIPTION
 
