@@ -455,6 +455,7 @@ my %words = (
     "really" => "for real",
     "relax" => "chill",
     "relaxation" => "chillin",
+    "respect" => "restecp",
     "rest" => "chill",
     "ride" => "bang",
     "ripe" => "full bush",
